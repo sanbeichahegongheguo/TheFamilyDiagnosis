@@ -1,0 +1,12 @@
+[server]
+port = 8501
+enableXsrfProtection=true
+enableCORS = false
+headless=true
+
+[runner]
+# Default: true
+# fastReruns = false
+
+[client]
+# showSidebarNavigation = false
