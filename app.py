@@ -58,9 +58,9 @@ if authentication_status:
 
         mydata.main()
 
-        with cols2.container():
-            authenticator.logout()
-            st.stop()
+    with cols2.container():
+        authenticator.logout()
+        st.stop()
 
 elif authentication_status is False:
     st.error('Username/Password 错误。')
