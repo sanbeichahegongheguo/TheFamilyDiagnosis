@@ -1,6 +1,5 @@
 import streamlit as st
 import datetime
-import time
 
 
 
@@ -9,15 +8,6 @@ def main():
     st.title("欢迎使用智能诊断系统!")
     st.write("请填入需要的指标以进行诊断推断。本系统结论仅供参考。")
 
-    # Add a placeholder
-    latest_iteration = st.empty()
-    bar = st.progress(0)
-
-    for i in range(100):
-        # Update the progress bar with each iteration.
-        latest_iteration.text(f'Iteration {i+1}')
-        bar.progress(i + 1)
-        time.sleep(0.1)
 
     st.header("请输入基本信息.")
     sex = st.radio(
