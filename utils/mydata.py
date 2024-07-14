@@ -2,17 +2,16 @@ import streamlit as st
 import datetime
 
 
-
 def main():
     # 在这里编写你的应用程序逻辑
-    st.title("欢迎使用智能诊断系统!")
+    st.title("欢迎使 用智能诊断系统!")
     st.write("请填入需要的指标以进行诊断推断。本系统结论仅供参考。")
 
-    st.header("请输入基本信息.")
+    st.header("请输入患者基本信息.")
 
 
     sex = st.radio(
-        label ="请输入性别",
+        label ="请输入患性别",
         options = ("男", "女", "未知"),
         index = 2,
         format_func =str,
@@ -67,6 +66,18 @@ def main():
             "数值": [data1, data2, data3],
             "单位": ["ug/ml", "ul/ml", "计数"]}
     st.table(data)
+
+    st.header("请提供家族史信息.")
+    family = st.multiselect(
+        label = '请选择患者家族史中有癌症史的家属',
+        options = ('父亲', '母亲', '祖父', ,'祖母', ,'外祖父','外祖母',
+                   '儿子','女儿','其他母系亲属', '其他父系亲属', '无', '未知'),
+        default = None,
+        format_func = str,
+        help = '请选择患者家族史中有癌症史的家属'
+        )
+
+    st.write('您喜欢吃的是', family)
 
 if __name__ == '__main__':
     main()
