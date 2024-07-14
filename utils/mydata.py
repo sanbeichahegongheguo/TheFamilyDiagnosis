@@ -70,7 +70,7 @@ def main():
     st.header("请提供家族史信息.")
     family = st.multiselect(
         label = '请选择患者家族史中有癌症史的家属',
-        options = ('父亲', '母亲', '祖父', ,'祖母', ,'外祖父','外祖母',
+        options = ('父亲', '母亲', '祖父', '祖母', '外祖父', '外祖母',
                    '儿子','女儿','其他母系亲属', '其他父系亲属', '无', '未知'),
         default = None,
         format_func = str,
