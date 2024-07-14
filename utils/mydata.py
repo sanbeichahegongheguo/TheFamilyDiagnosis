@@ -76,7 +76,7 @@ def main():
         format_func = str,
         help = '请选择患者家族史中有癌症史的家属'
         )
-
+    st.write('家族史中有癌症史的家属', family)
 
 if __name__ == '__main__':
     main()
