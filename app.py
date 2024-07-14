@@ -56,6 +56,10 @@ if authentication_status:
         cols1, cols2 = st.columns(2)
         cols1.write('欢迎用户 *%s*' % (name))
 
+        st.write("DB username:", st.secrets["db_username"])
+        st.write("DB password:", st.secrets["db_password"])
+        st.write("My cool secrets:", st.secrets["my_cool_secrets"]["things_i_like"])
+
         mydata.main()
 
     with cols2.container():
