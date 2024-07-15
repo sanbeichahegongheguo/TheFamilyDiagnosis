@@ -23,13 +23,8 @@ if st.button('点我'):
     st.write('今天是个好日子！')
 
 
-# 如下代码数据，可以来自数据库
-names = ['肖永威', '管理员']
-usernames = ['xiaoyw', 'admin']
-passwords = ['S0451', 'ad4516']
-
 authenticator = stauth.Authenticate(
-    {'usernames': {'李森茂': {'email': None, 'name': '李森茂', 'password': '123'}}},
+    {'usernames': {'李森茂': {'email': None, 'name': st.secrets["db_username"], 'password': st.secrets["db_password"]}}},
     'st_debug_cookie',
     'kjsdnfkjdsnjfknskd',
     30.0,
@@ -55,10 +50,6 @@ if authentication_status:
     with st.container():
         cols1, cols2 = st.columns(2)
         cols1.write('欢迎用户 *%s*' % (name))
-
-        st.write("DB username:", st.secrets["db_username"])
-        st.write("DB password:", st.secrets["db_password"])
-        st.write("My cool secrets:", st.secrets["my_cool_secrets"]["things_i_like"])
 
         mydata.main()
 
