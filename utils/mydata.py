@@ -14,7 +14,6 @@ def main():
         label ="请输入患性别",
         options = ("男", "女", "未知"),
         index = 2,
-        format_func =str,
     )
     st.write('患者的性别是:', sex)
 

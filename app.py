@@ -1,6 +1,5 @@
 import streamlit as st
 import streamlit_authenticator as stauth
-from streamlit_authenticator.utilities.hasher import Hasher
 
 # Pass the list of passwords directly to the
 # Hasher constructor and generate the hashes
