@@ -4,7 +4,7 @@ import datetime
 
 def main():
     # 在这里编写你的应用程序逻辑
-    st.title("欢迎使 用智能诊断系统!")
+    st.title("欢迎使用智能诊断系统!")
     st.write("请填入需要的指标以进行诊断推断。本系统结论仅供参考。")
 
     st.header("请输入患者基本信息.")
@@ -28,14 +28,13 @@ def main():
     st.write('患者的出生年月是：', birthday)
 
 
-    age = st.number_input(label = '请输入患者的年龄',
-                        min_value=0,
-                        max_value=100,
-                        value=0,
-                        step=1,
-                        help='请输入患者的年龄'
-                        )
-    st.write('患者的年龄是', age)
+    if birthday:
+        # 示例计算年龄，实际应使用更准确的日期计算库
+        today = datetime.date.today()
+        age = today.year - birthday.year - ((today.month, today.day) < (birthday.month, birthday.day))
+        st.write('患者的年龄是:', age)
+    else:
+        age = None
 
 
     st.header("请输入检验指标.")
@@ -73,7 +72,6 @@ def main():
         options = ('父亲', '母亲', '祖父', '祖母', '外祖父', '外祖母',
                    '儿子','女儿','其他母系亲属', '其他父系亲属', '无', '未知'),
         default = None,
-        format_func = str,
         help = '请选择患者家族史中有癌症史的家属'
         )
 
