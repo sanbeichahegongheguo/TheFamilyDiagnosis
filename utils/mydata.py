@@ -23,8 +23,7 @@ def main():
                         min_value=None,
                         max_value=datetime.date.today(),
                         help='请输入您的出生年月')
-
-    st.write('患者的出生年月是：', birthday)
+    st.write(f'患者的出生年月是：{birthday} 岁')
 
 
     if birthday:
