@@ -7,7 +7,7 @@ def main():
     st.title("欢迎使用智能诊断系统!")
     st.write("请填入需要的指标以进行诊断推断。本系统结论仅供参考。")
 
-    st.header("请输入患者基本信息.")
+    st.header("请输入患者基本信息")
 
 
     sex = st.radio(
@@ -36,7 +36,7 @@ def main():
         st.write('患者的年龄未知.')
 
 
-    st.header("请输入检验指标.")
+    st.header("请输入检验指标")
     data1 = st.number_input(label = '请输入患者的转氨酶',
                     min_value=0,
                     max_value=100,
@@ -65,7 +65,7 @@ def main():
             "单位": ["ug/ml", "ul/ml", "计数"]}
     st.table(data)
 
-    st.header("请提供家族史信息.")
+    st.header("请提供家族史信息")
     family = st.multiselect(
         label = '请选择患者家族史中有癌症史的家属',
         options = ('父亲', '母亲', '祖父', '祖母', '外祖父', '外祖母',
