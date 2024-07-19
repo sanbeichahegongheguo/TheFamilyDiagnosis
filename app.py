@@ -21,10 +21,10 @@ st.set_page_config(
 if st.button('点我'):
     st.write('今天是个好日子！')
 
-hashed_passwords = stauth.Hasher(st.secrets["db_password"]).generate()
+
 authenticator = stauth.Authenticate(
     {'usernames': {st.secrets["db_username"]:
-                   {'email': None, 'name': st.secrets["db_username"], 'password': hashed_passwords}}},
+                   {'email': None, 'name': st.secrets["db_username"], 'password': st.secrets["db_password"]}}},
     'st_debug_cookie',
     'kjsdnfkjdsnjfknskd',
     30.0,
