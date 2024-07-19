@@ -23,16 +23,17 @@ def main():
                         min_value=None,
                         max_value=datetime.date.today(),
                         help='请输入您的出生年月')
-    st.write(f'患者的出生年月是：{birthday} 岁')
+    st.write(f'患者的出生年月是：{birthday}')
 
 
     if birthday:
         # 示例计算年龄，实际应使用更准确的日期计算库
         today = datetime.date.today()
         age = today.year - birthday.year - ((today.month, today.day) < (birthday.month, birthday.day))
-        st.write('患者的年龄是:', age)
+        st.write(f'患者的年龄是：{age} 岁.')
     else:
         age = None
+        st.write('患者的年龄未知.')
 
 
     st.header("请输入检验指标.")
