@@ -23,8 +23,8 @@ if st.button('点我'):
 
 
 authenticator = stauth.Authenticate(
-    {'usernames': {st.secrets["db_username"]:
-                   {'email': None, 'name': st.secrets["db_username"], 'password': st.secrets["db_password"]}}},
+    {'usernames': {李森茂:
+                   {'email': None, 'name': lisenmao, 'password': 123}}},
     'st_debug_cookie',
     'kjsdnfkjdsnjfknskd',
     30.0,
