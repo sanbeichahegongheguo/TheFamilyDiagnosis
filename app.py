@@ -1,13 +1,6 @@
 import streamlit as st
 import streamlit_authenticator as stauth
 
-# Pass the list of passwords directly to the
-# Hasher constructor and generate the hashes
-# passwords_to_hash = ['fashion@123', 'increff@fashion']
-# hashed_passwords = Hasher(passwords_to_hash).generate()
-
-# print(hashed_passwords)
-import datetime
 import utils.mydata as mydata
 
 # 初始化一个Streamlit应用
