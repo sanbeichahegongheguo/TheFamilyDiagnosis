@@ -3,7 +3,6 @@ import datetime
 
 
 def main():
-    # 在这里编写你的应用程序逻辑
     st.title("欢迎使用智能诊断系统!")
     st.write("请填入需要的指标以进行诊断推断。本系统结论仅供参考。")
 
@@ -13,7 +12,7 @@ def main():
     sex = st.radio(
         label ="请输入患性别",
         options = ("男", "女", "未知"),
-        index = 2,
+        index = 0,
     )
     st.write('患者的性别是:', sex)
 
@@ -42,7 +41,8 @@ def main():
                     max_value=100,
                     value=0,
                     step=1,
-                    help='请输入患者的转氨酶'
+                    help='请输入患者的转氨酶',
+                    key='transaminase'
                     )
     data2 = st.number_input(label = '请输入患者的尿酸',
                     min_value=0,
@@ -70,7 +70,7 @@ def main():
         label = '请选择患者家族史中有癌症史的家属',
         options = ('父亲', '母亲', '祖父', '祖母', '外祖父', '外祖母',
                    '儿子','女儿','其他母系亲属', '其他父系亲属', '无', '未知'),
-        default = None,
+        default = [],
         help = '请选择患者家族史中有癌症史的家属'
         )
 
