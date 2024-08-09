@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 from sklearn.cluster import KMeans
 import sys
-sys.path.append('C:\\Users\\time\\Documents\\GitHub\\TheFamilyDiagnosis')
+sys.path.append('"../utils"')
 from utils.kmeansdata import apply_kmeans
 
 class TestKMeans(unittest.TestCase):
