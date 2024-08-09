@@ -1,8 +1,13 @@
 import streamlit as st
 import datetime
+import sys
+sys.path.append("./utils")
+from kmeansdata import run_kmeans_and_plot
+from randomsdata import train_RandomForest, apply_RandomForest
 
 
-def main():
+
+def main() -> None:
     st.title("欢迎使用智能诊断系统!")
     st.write("请填入需要的指标以进行诊断推断。本系统结论仅供参考。")
 
@@ -73,6 +78,18 @@ def main():
         default = [],
         help = '请选择患者家族史中有癌症史的家属'
         )
+
+
+    st.header("使用K-Means算法进行聚类")
+    kmean_result = st.slider('Number of clusters (k)', min_value=2, max_value=6, value=3)
+    run_kmeans_and_plot(kmean_result)
+
+
+    st.header("使用随机森林预测模型")
+    new_patient_data = [[50, 0.3, 0.8, 0.4]]
+    rf_model = train_RandomForest()
+    s = apply_RandomForest(rf_model, new_patient_data)
+    st.write(s)
 
 
 if __name__ == '__main__':
