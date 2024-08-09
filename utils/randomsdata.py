@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -45,6 +44,7 @@ def apply_RandomForest(rf_model, new_patient_data) -> None:
     prediction = rf_model.predict_proba(new_patient_data)
     print(prediction[0][0])
     return "结果预测: 患有癌症的概率: {:.2f}%.没有癌症的概率: {:.2f}%.".format(prediction[0][0]*100, prediction[0][1]*100)
+
 
 if __name__ == "__main__":
     new_patient_data = [[50, 0.3, 0.8, 0.4]]

@@ -1,9 +1,9 @@
 import unittest
 import numpy as np
 from sklearn.cluster import KMeans
+from utils.kmeansdata import apply_kmeans
 import sys
 sys.path.append('"../utils"')
-from utils.kmeansdata import apply_kmeans
 
 class TestKMeans(unittest.TestCase):
     def setUp(self):
