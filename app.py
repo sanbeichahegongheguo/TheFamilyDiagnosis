@@ -1,6 +1,5 @@
 import streamlit as st
 import streamlit_authenticator as stauth
-
 import utils.mydata as mydata
 
 # 初始化一个Streamlit应用
@@ -24,8 +23,6 @@ authenticator = stauth.Authenticate(
     {'emails': None}
 )
 
-
-# name, authentication_status, username = authenticator.login('Login', 'main')
 name, authentication_status, username = authenticator.login(location="sidebar", fields={'Form name': '登陆页面', 'Username': '用户名', 'Password': '密码',
                       'Login':'登录'}, clear_on_submit=True)
 
@@ -44,7 +41,6 @@ if authentication_status:
     with st.container():
         cols1, cols2 = st.columns(2)
         cols1.write('欢迎用户 *%s*' % (name))
-
         mydata.main()
 
     with cols2.container():
