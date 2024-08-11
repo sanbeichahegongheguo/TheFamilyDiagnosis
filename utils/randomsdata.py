@@ -31,9 +31,9 @@ def train_RandomForest():
     rf_model.fit(X_train, y_train)
 
     # 模型评估
-    y_pred = rf_model.predict(X_test)
-    print("Accuracy:", accuracy_score(y_test, y_pred))
-    print("Classi   fication Report:\n", classification_report(y_test, y_pred))
+    # y_pred = rf_model.predict(X_test)
+    # print("Accuracy:", accuracy_score(y_test, y_pred))
+    # print("Classi   fication Report:\n", classification_report(y_test, y_pred))
     return rf_model
 
 # def apply_RandomForest():
