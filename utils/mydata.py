@@ -1,9 +1,9 @@
 import streamlit as st
 import datetime
-from kmeansdata import run_kmeans_and_plot
-from randomsdata import train_RandomForest, apply_RandomForest
 import sys
 sys.path.append("./utils")
+from kmeansdata import run_kmeans_and_plot
+from randomsdata import train_RandomForest, apply_RandomForest
 
 
 def main() -> None:
