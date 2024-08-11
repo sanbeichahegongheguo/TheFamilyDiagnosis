@@ -41,7 +41,6 @@ class TestKMeans(unittest.TestCase):
         # 注意：上面的“聚类间距离”计算并不是直接由K-Means给出的，
         # 并且聚类间距离的定义可能因应用场景而异（例如，可以使用聚类中心之间的距离）。
 
-
         # 检查返回的标签和中心的数量是否正确
         self.assertEqual(len(labels), self.data.shape[0])
         self.assertEqual(centers.shape[0], k)
