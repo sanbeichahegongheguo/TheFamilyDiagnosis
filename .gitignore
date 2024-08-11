@@ -163,3 +163,5 @@ cython_debug/
 utils/BigBooks
 utils/plotly_utils
 utils/overview
+
+.hsistory/
