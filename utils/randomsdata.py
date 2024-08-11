@@ -31,9 +31,9 @@ def train_RandomForest():
     rf_model.fit(X_train, y_train)
 
     # 模型评估
-    y_pred = rf_model.predict(X_test)
-    print("Accuracy:", accuracy_score(y_test, y_pred))
-    print("Classi   fication Report:\n", classification_report(y_test, y_pred))
+    # y_pred = rf_model.predict(X_test)
+    # print("Accuracy:", accuracy_score(y_test, y_pred))
+    # print("Classi   fication Report:\n", classification_report(y_test, y_pred))
     return rf_model
 
 # def apply_RandomForest():
@@ -42,7 +42,7 @@ def apply_RandomForest(rf_model, new_patient_data) -> None:
     # 使用模型进行预测
     # rf = apply_RandomForest()
     prediction = rf_model.predict_proba(new_patient_data)
-    print(prediction[0][0])
+    # print(prediction[0][0])
     return "结果预测: 患有癌症的概率: {:.2f}%.没有癌症的概率: {:.2f}%.".format(prediction[0][0]*100, prediction[0][1]*100)
 
 
