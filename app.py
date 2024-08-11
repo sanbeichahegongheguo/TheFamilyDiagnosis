@@ -26,7 +26,8 @@ authenticator = stauth.Authenticate(
 
 
 # name, authentication_status, username = authenticator.login('Login', 'main')
-name, authentication_status, username = authenticator.login()
+name, authentication_status, username = authenticator.login(location="sidebar", fields={'Form name': '登陆页面', 'Username': '用户名', 'Password': '密码',
+                      'Login':'登录'}, clear_on_submit=True)
 
 # def initialize_session_state():
 #     if 'name' not in st.session_state:
@@ -47,7 +48,7 @@ if authentication_status:
         mydata.main()
 
     with cols2.container():
-        authenticator.logout()
+        authenticator.logout(button_name="退出")
         st.stop()
 
 elif authentication_status is False:
