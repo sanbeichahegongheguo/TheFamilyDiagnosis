@@ -163,5 +163,7 @@ cython_debug/
 utils/BigBooks
 utils/plotly_utils
 utils/overview
+utils/connect_mysql.py
+
 
 .history/
