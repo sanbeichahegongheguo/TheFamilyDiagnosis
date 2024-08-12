@@ -48,7 +48,7 @@ if authentication_status:
         st.stop()
 
 elif authentication_status is False:
-    st.error('Username/Password 错误。')
+    st.error('用户名/密码 错误。')
 
 elif authentication_status is None:
-    st.warning('请输入你的 username 和 password')
+    st.warning('请输入你的 用户名 和 密码')
